@@ -56,3 +56,26 @@ const myfunction = function (){
 }
 
 
+//**************************************************************** */
+
+// Stack(Primitive), Heap(Non-Primitive)
+
+// let myYoutubeName = "sachin"
+
+// let annothername = myYoutubeName;
+// annothername = "chaiorcode";
+
+// console.log(annothername);
+// console.log(myYoutubeName)
+
+let userOne={
+    name : "sachin",
+    age: 22
+}
+
+let userTwo = userOne;
+
+userTwo.name = "mandal";
+
+console.log(userOne.name)
+console.log(userTwo.name)
