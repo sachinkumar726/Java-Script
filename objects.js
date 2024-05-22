@@ -89,3 +89,37 @@ const users = [
 // console.log(Object.entries(tinderUser));
 
 console.log(tinderUser.hasOwnProperty('isLogedIn')); // checking property present or not 
+
+//*************************************** */
+
+const course = {
+    coursename : "js in hindi",
+    price: "120",
+    courseIntstructor: "sachin"
+}
+//course.courseIntstructor
+const {courseIntstructor: instructor} =course;
+console.log(instructor);
+
+// const navbar = ({company}) =>{
+
+// }
+
+// navbar(company = "hitesh")
+
+
+/**************** API ****************** */
+
+// {
+//     "name ": "sachin",
+//     "coursename ": "js in hindi",
+//     "price": "free"
+
+// }
+[
+    {},
+    {},
+    {},
+]
+
+
