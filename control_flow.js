@@ -5,6 +5,7 @@
  if(temprature === 41){
     console.log("HOT")
  }
+ 
  else{
     console.log("Cold")
  }
