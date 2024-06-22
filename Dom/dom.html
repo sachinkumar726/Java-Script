@@ -14,22 +14,41 @@
 </head>
 
 <body class="bg-black">
-    <div>
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+        <div class="day">Saturday</div>
         
-        <h1 id="title" class="heading">Dom learining On chai or code <span style="display: none;">test text</span></h1>
-        <h2>Lorem ipsum dolor sit.</h2>
-        <h2>Lorem ipsum dolor sit.</h2>
-        <h2 id="">Lorem ipsum dolor sit.</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, aspernatur!</p>
-
     </div>
 
-    <ul>
-        <li class="list-itemm">one</li>
-        <li class="list-itemm">two</li>
-        <li class="list-itemm">three</li>
-        <li class="list-item">Four</li>
-    </ul>
+   <script>
+        const parent = document.querySelector('.parent')
+        // console.log(parent)
+        // console.log(parent.children);
+        // console.log(parent.children[1].innerHTML)
+
+        // for (let i = 0; i < parent.children.length; i++) {
+        //     console.log(parent.children[i].innerHTML)
+            
+        // }
+        parent.children[1].style.color = "orange"
+        console.log(parent.firstElementChild);
+        console.log(parent.lastElmentChild);
+
+       const dayone=  document.querySelector('.day')
+       console.log(dayone); 
+       console.log(dayone.parentElement);
+       console.log(dayone.nextElementSibling);
+
+       console.log("Nodes:", parent.childNodes);
+
+       
+
+
+
+   </script>
 
 </body>
 
