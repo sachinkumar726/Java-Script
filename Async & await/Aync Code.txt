@@ -1,0 +1,12 @@
+
+-> Javascript
+        -> Synchronous
+        -> single threaded
+
+-> Execution Context
+    -> execute one line of code at a time
+    
+    -> console log -1
+    -> console log ->2 
+
+            CALL STACK   MEMORY HEAP
