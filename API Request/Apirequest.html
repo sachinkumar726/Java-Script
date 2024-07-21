@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API</title>
+
+    <style>
+        .main-card {
+            height: 500px;
+            width: 400px;
+            background-color: aliceblue;
+            color: #000;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .main-card .image_section {
+            height: 50%;
+            width: 100%;
+        }
+        .main-card .image_section img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+        .main-card .about_card {
+            height: 50%;
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .main-card .about_card .info {
+            border: solid gray;
+            border-radius: 5px;
+            padding: 10px;
+            background-color: white;
+        }
+    </style>
+</head>
+<body style="background-color: black; color: #fff;">
+    <div class="main-card">
+        <div class="image_section">
+            <img id="avatar" src="" alt="User Avatar">
+        </div>
+        <div class="about_card">
+            <div class="info">
+                <h3 id="name">Name</h3>
+                <h3 id="followers">Followers</h3>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const requestUrl = 'https://api.github.com/users/sachinkumar726';
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', requestUrl);
+        console.log(xhr.readyState);
+        xhr.onreadystatechange = function() {
+            console.log(xhr.readyState);
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                const data = JSON.parse(this.responseText);
+                console.log(data);
+
+                // Update the HTML elements with the fetched data
+                document.getElementById('avatar').src = data.avatar_url;
+                document.getElementById('name').textContent = `Name: ${data.name}`;
+                document.getElementById('followers').textContent = `Followers: ${data.followers}`;
+            }
+        };
+        xhr.send();
+    </script>
+</body>
+</html>
